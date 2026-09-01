@@ -2,11 +2,6 @@
 #include <string>
 using namespace std;
 
-// test 2
-// test 3
-// test 4
-// test 5
-// test 6
 
 class GameEntry
 { // a game score entry
@@ -35,26 +30,20 @@ private:
 
 int main()
 {
-    GameEntry P1("Mike", 1105);
-    GameEntry P2("Rob", 750);
-    GameEntry P3("Paul", 720);
-    GameEntry P4("Anna", 660);
-    GameEntry P5("Rose", 590);
-    GameEntry P6("Jack", 510);
+    GameEntry Player1("Mikel", 888);
+    GameEntry Player2("Rob", 222);
+    GameEntry Player3("Anna", 668);
+    GameEntry Player4("Jil", 777);
 
     Scores ScoreBoard(10);
-
-    ScoreBoard.add(P4);
-    ScoreBoard.add(P5);
-    ScoreBoard.add(P6);
-    ScoreBoard.add(P1);
-    ScoreBoard.add(P2);
-    ScoreBoard.add(P3);
-
+    ScoreBoard.add(Player1);
+    ScoreBoard.add(Player2);
+    ScoreBoard.add(Player3);
+    ScoreBoard.add(Player4);
     ScoreBoard.printList();
 
-    ScoreBoard.remove(1);
-    ScoreBoard.printList();
+
+
 
 }
 
