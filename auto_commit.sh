@@ -1,14 +1,10 @@
 
 #!/bin/bash
 
-# Navigate to your git repository
-# Note: Use forward slashes for paths in Git Bash (e.g., /c/Users/Name/Projects/Repo)
 cd "/d/desk-tm/Coding/DSA/UC2-Y2S1-26/E2/github/BTUC2-Y2S1E2-26-DSA"
 
 # Check if there are any changes to commit
 if [[ -n $(git status -s) ]]; then
-    echo "Changes detected. Preparing to commit..."
-    
     # Stage all changes
     git add .
     
@@ -16,7 +12,8 @@ if [[ -n $(git status -s) ]]; then
     TIMESTAMP=$(date +"%Y-%m-%d %H:%M:%S")
     git commit -m "Auto-commit: $TIMESTAMP"
     
-    # Push changes to GitHub (assumes main branch and saved credentials)
+    # Push changes to GitHub
+    # (assumes main branch and saved credentials)
     git push
     
     echo "Successfully pushed at $TIMESTAMP"
