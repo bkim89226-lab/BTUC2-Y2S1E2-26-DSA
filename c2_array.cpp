@@ -42,7 +42,9 @@ int main()
     ScoreBoard.add(Player4);
     ScoreBoard.printList();
 
-
+    ScoreBoard.remove(1);
+    cout << "After removing item 1." << endl;
+    ScoreBoard.printList();
 
 
 }
