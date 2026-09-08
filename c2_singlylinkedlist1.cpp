@@ -22,7 +22,7 @@ public:
     //void removeAt(int k, const string& e); // remove kth node  
     //void printreverse() const;
     void print() const;             // print all list elements
-    //void addAt(int k, const string& e); // add at kth node   
+    void addAt(int k, const string& e); // add at kth node   
 private:
     StringNode *head; // pointer to the head of list
 };
@@ -70,6 +70,9 @@ int main(){
     cout << "\n";
     TravelStop.print();
     // TravelStop.addFront(100); 
+    TravelStop.removeFront();
+    cout << "\n";
+    TravelStop.print();
 
     return 0;
 }
