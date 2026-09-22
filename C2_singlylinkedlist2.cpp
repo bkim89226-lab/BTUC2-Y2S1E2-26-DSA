@@ -93,6 +93,10 @@ int main() {
     TravelDistance.print();
 
 
+    SLinkedList<string> FoodsILike;
+    FoodsILike.addFront("Pizza");
+    
+
 
     return 0;
 
