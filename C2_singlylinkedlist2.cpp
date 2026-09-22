@@ -25,6 +25,7 @@ public:
     void addFront(const E &e); // add to front of list
     void removeFront();        // remove front item list
     void print() const;
+    int insertAt(int k);   // method to be implemented 
 private:
     SNode<E> *head; // head of the list
 };

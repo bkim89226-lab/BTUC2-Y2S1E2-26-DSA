@@ -22,7 +22,7 @@ public:
     //void removeAt(int k, const string& e); // remove kth node  
     //void printreverse() const;
     void print() const;             // print all list elements
-    void addAt(int k, const string& e); // add at kth node   
+    int insertAt(int k, const string& e); // add at kth node   
 private:
     StringNode *head; // pointer to the head of list
 };
@@ -44,6 +44,12 @@ bool StringLinkedList::empty() const
 const string &StringLinkedList::front() const 
     { return head->elem; }
 
+int StringLinkedList::insertAt(int k, const string& e){
+
+
+}; 
+
+
 // add to front of list
 void StringLinkedList::addFront(const string &e){
     StringNode *v = new StringNode;   // create new node
@@ -61,18 +67,18 @@ void StringLinkedList::removeFront(){
 
 int main(){
 
-    StringLinkedList TravelStop;
-    TravelStop.addFront("Toulouse");
-    TravelStop.addFront("Frankfurt");
-    TravelStop.addFront("Qatar");
-    TravelStop.print();
-    TravelStop.addFront("PhnomPenh");
+    StringLinkedList StudentList;
+    StudentList.addFront("London");
+    StudentList.addFront("Frankfurt");
+    StudentList.addFront("Qatar");
+    StudentList.print();
+    StudentList.addFront("PhnomPenh");
     cout << "\n";
-    TravelStop.print();
-    // TravelStop.addFront(100); 
-    TravelStop.removeFront();
+    StudentList.print();
+    // StudentList.addFront(100); 
+    StudentList.removeFront();
     cout << "\n";
-    TravelStop.print();
+    StudentList.print();
 
     return 0;
 }
@@ -85,3 +91,4 @@ void StringLinkedList::print() const{
     }
     cout << " (End) ";
 }
+
