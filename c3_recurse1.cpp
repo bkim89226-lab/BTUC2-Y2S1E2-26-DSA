@@ -57,6 +57,21 @@ long long FibWithMemorization(int n){
 } // Runtime -> O(n) 
 
 
+// Move t1 -> t3
+void SolveTowerOfHanoi(int n, char t1, char t2, char t3){
+    // base case 
+    if (n ==1) {
+        cout << "Move disk from " << t1 << " to " << t3 << endl;
+        return; 
+    }
+
+    // recursive call 
+    // ???
+    SolveTowerOfHanoi(n-1, t1, t3, t2);
+    cout << "Move disk from " << t1 << " to " << t3 << endl;
+    SolveTowerOfHanoi(n-1, t2, t1, t3);
+}
+
 int main(){
 
     // int result = factorialLoop(10);
@@ -74,7 +89,7 @@ int main(){
     // cout << Fib(50) << endl;
 
     // Fast running code 
-    cout << FibWithMemorization(50) << endl;
+    // cout << FibWithMemorization(50) << endl;
 
 
     // map<int, int> m;
