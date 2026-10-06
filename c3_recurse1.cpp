@@ -63,7 +63,7 @@ void SolveTowerOfHanoi(int n, char t1, char t2, char t3){
     if (n ==1) {
         cout << "Move disk from " << t1 << " to " << t3 << endl;
         return; 
-    }
+    }  
 
     // recursive call 
     // ???
@@ -71,6 +71,18 @@ void SolveTowerOfHanoi(int n, char t1, char t2, char t3){
     cout << "Move disk from " << t1 << " to " << t3 << endl;
     SolveTowerOfHanoi(n-1, t2, t1, t3);
 }
+// runtime :  O(2^n)
+
+int Number_Path_grid_mn(int m, int n){
+    // base case
+    if(m==1 || n==1) return 1;
+    if(m<=0 || n<=0) return 0;
+    // recursive call
+    return Number_Path_grid_mn(m, n-1) + Number_Path_grid_mn(m-1,n);
+
+}// runtime :  O(2^(m+n))
+
+
 
 int main(){
 
@@ -97,6 +109,14 @@ int main(){
     // m[1] = 20;
     // cout << m.size() << endl;
 
+    // // S : Start    D : Destination   I :  intermediate 
+    // //int diskNumber = 3;
+    // int diskNumber = 50;
+    // SolveTowerOfHanoi(diskNumber, 'S', 'I', 'D');
+
+    // Grid m x n 
+    cout << "Number of path in grid 3x4: " 
+    << Number_Path_grid_mn(20,20) << endl;
 
     return 0;
 }
