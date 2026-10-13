@@ -54,7 +54,7 @@ int main() {
     get_motherboard_serial(serial, sizeof(serial));
     strncpy(LastFourserial, serial, 4);
     LastFourserial[4] = '\0';
-    printf("Motherboard Serial/Device ID: \n %s\n", LastFourserial);
+    printf("4 digit of Serial/Device ID: \n \n %s\n", LastFourserial);
     
     return 0;
 }
