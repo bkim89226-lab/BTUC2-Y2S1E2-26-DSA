@@ -49,12 +49,20 @@ void get_motherboard_serial(char *buffer, size_t max_len) {
 
 int main() {
     char serial[256] = {0};
-    char LastFourserial[4] = {0};
 
     get_motherboard_serial(serial, sizeof(serial));
-    strncpy(LastFourserial, serial, 4);
-    LastFourserial[4] = '\0';
-    printf("4 digit of Serial/Device ID: \n \n %s\n", LastFourserial);
+
+    int len = strlen(serial);
+
+    if (len >= 4) {
+        // Point to the address of the string plus its length minus 4
+        char *last_four = serial + len - 4; 
+        printf("Last 4 digits: %s\n", last_four);
+    } else {
+        printf("String is too short.\n");
+    }
+
+    //printf("4 digit of Serial/Device ID: %s\n", serial);
     
     return 0;
 }
